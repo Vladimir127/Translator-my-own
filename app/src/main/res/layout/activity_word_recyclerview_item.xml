@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/error_linear_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/preview_image_view"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginBottom="@dimen/margin_medium"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:scaleType="centerCrop"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/part_of_speech_textview_recycler_item"
+        android:textSize="@dimen/text_size_standard"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="italic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginBottom="@dimen/margin_medium"
+        app:layout_constraintStart_toEndOf="@id/preview_image_view"
+        app:layout_constraintTop_toBottomOf="@id/transcription_textview_recycler_item"
+        tools:text="exc." />
+
+    <TextView
+        android:id="@+id/meaning_textview_recycler_item"
+        style="@style/HeaderTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_medium"
+        app:layout_constraintStart_toEndOf="@id/preview_image_view"
+        app:layout_constraintTop_toTopOf="@id/preview_image_view"
+        tools:text="1. привет" />
+
+    <TextView
+        android:id="@+id/transcription_textview_recycler_item"
+        style="@style/BaseTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium"
+        app:layout_constraintStart_toEndOf="@id/preview_image_view"
+        app:layout_constraintTop_toBottomOf="@id/meaning_textview_recycler_item"
+        tools:text="[hɛˈləʊ]" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/hairline"
+        android:layout_marginTop="@dimen/margin_small"
+        android:background="@color/color_gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/part_of_speech_textview_recycler_item"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
