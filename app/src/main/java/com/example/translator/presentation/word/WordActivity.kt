@@ -25,9 +25,6 @@ class WordActivity : AppCompatActivity() {
         binding = ActivityWordBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val word = intent.getStringExtra("word")
-        binding.wordTextView.text = word
-
         val data = intent.getParcelableExtra<DataModel>("data")
         binding.wordTextView.text = data?.text
         showTranslations(data?.meanings)

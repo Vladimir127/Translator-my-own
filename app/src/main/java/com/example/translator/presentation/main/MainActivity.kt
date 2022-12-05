@@ -31,7 +31,6 @@ class MainActivity : AppCompatActivity(),
             override fun onItemClick(data: DataModel) {
                 val intent = Intent(this@MainActivity, WordActivity::class.java)
                 intent.putExtra("data", data)
-                intent.putExtra("word", word)
                 startActivity(intent)
             }
         }
